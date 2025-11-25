@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { Form, useActionData, useNavigation } from "react-router-dom";
+import Button from "../ui/Button";
 
 const fakeCart = [
   {
@@ -43,13 +44,13 @@ function CreateOrder() {
       <Form method="POST">
         <div>
           <label>First Name</label>
-          <input type="text" name="customer" required />
+          <input type="text" name="customer" className="input" required />
         </div>
 
         <div>
           <label>Phone number</label>
           <div>
-            <input type="tel" name="phone" required />
+            <input type="tel" name="phone" className="input" required />
           </div>
         </div>
         {formErrors?.phone && <p>{formErrors}</p>}
@@ -57,7 +58,12 @@ function CreateOrder() {
         <div>
           <label>Address</label>
           <div>
-            <input type="text" name="address" required />
+            <input
+              type="text"
+              name="address"
+              className="input"
+              required
+            />
           </div>
         </div>
 
@@ -66,6 +72,8 @@ function CreateOrder() {
             type="checkbox"
             name="priority"
             id="priority"
+            className="h-4 w-4 accent-rose-800
+            focus:outline-none focus:ring focus:ring-rose-800 focus:ring-offset-2"
             value={withPriority}
             onChange={(e) => setWithPriority(e.target.checked)}
           />
@@ -74,9 +82,11 @@ function CreateOrder() {
 
         <div>
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
-          <button disabled={isSubmitting}>
+          <Button
+            disabled={isSubmitting}
+          >
             {isSubmitting ? "Placing order..." : "Order now"}
-          </button>
+          </Button>
         </div>
       </Form>
     </div>
