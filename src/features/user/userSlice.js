@@ -36,5 +36,7 @@ const userSlice = createSlice({
   },
 });
 
-export const {updateName} = userSlice.actions; // get action creators
+export const { updateName } = userSlice.actions; // get action creators
 export default userSlice.reducer; // to create store later
+
+export const getUsername = (state) => state.user.username;

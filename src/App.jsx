@@ -3,8 +3,9 @@ import Home from "./features/ui/Home";
 import Menu from "./features/menu/Menu";
 import { loader as menuLoader } from "./features/menu/menuLoader";
 import Cart from "./features/cart/Cart";
-import CreateOrder from "./features/order/CreateOrder";
-import { action as createOrderAction } from "./features/order/createOrderAction";
+import CreateOrder, {
+  action as createOrderAction,
+} from "./features/order/CreateOrder";
 import Order from "./features/order/Order";
 import { loader as orderLoader } from "./features/order/orderLoader";
 import AppLayout from "./features/ui/AppLayout";
