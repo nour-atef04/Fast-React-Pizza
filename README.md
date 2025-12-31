@@ -4,6 +4,8 @@ A full-featured pizza ordering web application built with **React**, **React Rou
 
 Users can browse the menu, add pizzas to their cart, autofill their address, place an order, and track the delivery status.
 
+Link to website: https://fast-react-pizza-by-nour.netlify.app/
+
 ---
 
 ## Features
@@ -54,27 +56,5 @@ Users can browse the menu, add pizzas to their cart, autofill their address, pla
 - **fetch() API** for menu + order fetching
 - **BigDataCloud API** for reverse geocoding
 - **Vite** for dev environment
-
----
-
-## Installation & Setup
-
-Make sure you have **Node.js** installed.
-
-```bash
-git clone <your-repo-url>
-cd <your-repo-folder>
-npm install
-```
-
----
-
-## Start Development Server
-
-```bash
-npm run dev
-```
-
-The app will run on: http://localhost:5173
 
 ---
